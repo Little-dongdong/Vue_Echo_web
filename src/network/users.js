@@ -2,7 +2,23 @@ import {request} from "@/network/request";
 
 export function getUsersMultiData() {
   return request({
-    url:'/api/users'
+    url:'/api/users/'
   })
-
 }
+
+export function Login(data) {
+  return request({
+    method:'post',
+    url:'/api/login/',
+    data
+  })
+}
+
+export function GetSms(data) {
+  return request({
+    method:'get',
+    url:'/api/sms/',
+    data
+  })
+}
+

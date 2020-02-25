@@ -6,9 +6,9 @@
     <el-col class="right-col">
       <el-card class="box-card2" v-for="item in res">
         <el-row>
-          <aspn class="avatar">
+          <span class="avatar">
             <el-avatar :size="60" icon="el-icon-user-solid"></el-avatar>
-          </aspn>
+          </span>
           <span class="username">{{item.username}}</span>
         </el-row>
         <div class="text1">
@@ -39,7 +39,7 @@
     },
     created() {
       getUsersMultiData().then(res => {
-        this.res = res.data
+        this.res = res.data.results
       })
     },
   }
